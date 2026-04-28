@@ -173,7 +173,7 @@ int main(int argc, char *argv[])
         do{
             fEnabled = 0;
             /*width, height*/
-            if(3 <= argc - argvIndex && !strcmp(argv[argvIndex], "--size")){
+            if(3 <= (argc - argvIndex) && !strcmp(argv[argvIndex], "--size")){
                 argvIndex++;
                 printf("カスタムサイズ\n");
                 boardWidth = atoi(argv[argvIndex++]);
@@ -185,7 +185,7 @@ int main(int argc, char *argv[])
                 fEnabled = 1;
             }
             /*先手CPU化フラグ, 後手CPU化フラグ, シード値*/
-            if(4 <= argc - argvIndex && !strcmp(argv[argvIndex], "--auto")){
+            if(4 <= (argc - argvIndex) && !strcmp(argv[argvIndex], "--auto")){
                 argvIndex++;
                 for(int i = 0; i < 2; i++){
                     fAuto[i] = atoi(argv[argvIndex++]);
@@ -195,14 +195,14 @@ int main(int argc, char *argv[])
                 fEnabled = 1;
             }
             /*-*/
-            if(1 <= argc - argvIndex && !strcmp(argv[argvIndex], "--hidden")){
+            if(1 <= (argc - argvIndex) && !strcmp(argv[argvIndex], "--hidden")){
                 argvIndex++;
                 fBoardHidden = 1;
                 printf("盤面なしモード\n");
                 fEnabled = 1;
             }
             /*リザルト表\示時間(ミリ秒)*/
-            if(2 <= argc - argvIndex && !strcmp(argv[argvIndex], "--result")){
+            if(2 <= (argc - argvIndex) && !strcmp(argv[argvIndex], "--result")){
                 argvIndex++;
                 nResultShowTime = atoi(argv[argvIndex++]);
                 printf("結果表\示時間を指定: %dミリ秒\n", nResultShowTime);
