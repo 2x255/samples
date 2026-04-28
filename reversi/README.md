@@ -12,7 +12,7 @@
         で盤面のサイズを変更できます。ただし2以上の値に限ります。
 
     - 自動対戦  
-        `--auto [先手:  1(auto) or 0(manual)] [後手: 1(auto) or 0(manual)] [seed]`
+        `--auto [先手:  1(auto) or 0(manual)] [後手: 1(auto) or 0(manual)] [seed]`  
         で、どちらを自動にするか決められます。自動は、ただの乱数のためseed値を指定できます。
 
     - 盤面無しモード  
